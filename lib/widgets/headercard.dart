@@ -4,20 +4,21 @@ class HeaderCard extends StatelessWidget {
   const HeaderCard({
     super.key,
     required this.contactName,
+    required this.contactImage
   });
 
-  // Nombre del contacto
+  // Nombre e imagen del contacto
   final String contactName;
+  final String contactImage; // Formato -> https://picsum.photos/250?image=10
 
   @override
   Widget build(BuildContext context) {
     return Row(
       // Fila de widgets
       children: [
-        Icon(
-          Icons.account_circle,
-          size: 50,
-          color: Colors.red,
+        CircleAvatar(
+          backgroundImage: NetworkImage(contactImage),
+          radius: 25,
         ),
         SizedBox(width: 10),
         Text(

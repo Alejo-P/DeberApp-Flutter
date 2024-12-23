@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:list_cards/widgets/buttonscard.dart';
 import 'package:list_cards/widgets/descriptioncard.dart';
 import 'package:list_cards/widgets/headercard.dart';
-import 'package:list_cards/widgets/imagecard.dart';
 
 class UserCard extends StatelessWidget {
   const UserCard({
@@ -41,6 +40,7 @@ class UserCard extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: HeaderCard(
                 contactName: contact['name']!,
+                contactImage: contact['image']!,
               ),
             ),
             Padding( // Padding para el texto
@@ -48,14 +48,6 @@ class UserCard extends StatelessWidget {
               child: DescriptionCard(
                 contactDescription: contact['description']!,
               ),
-            ),
-            Container(
-              width: double.infinity,
-              // height: 150,
-              padding: const EdgeInsets.only(bottom: 10),
-              child: ImageCard(
-                imageContact: contact['image']!,
-              )
             ),
             Container(
               child: ButtonsCard(),
