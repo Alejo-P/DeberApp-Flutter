@@ -16,16 +16,17 @@ class UserCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 350,
+      height: 200,
       //margin: const EdgeInsets.all(10), // Margen de 10 en todos los lados (Fuera del contenedor)
       margin: const EdgeInsets.only(
-          top: 10,
-          left: 10,
-          right: 10,
-          bottom:
-              10), // Margen de 10 en la parte superior, izquierda y derecha (Fuera del contenedor)
+        top: 10,
+        left: 10,
+        right: 10,
+        bottom:10
+      ), // Margen de 10 en la parte superior, izquierda y derecha (Fuera del contenedor)
       padding: const EdgeInsets.all(
-          10), // Padding de 10 en todos los lados (Dentro del contenedor)
+        10
+      ), // Padding de 10 en todos los lados (Dentro del contenedor)
       decoration: const BoxDecoration(
         color: Colors.white,
       ),

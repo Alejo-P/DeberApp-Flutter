@@ -7,7 +7,6 @@ class ListCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return ListView.builder(
       itemCount: Contacts.length, // Cantidad de elementos
       itemBuilder: (context, index) { // Funcion que se ejecuta por cada elemento
