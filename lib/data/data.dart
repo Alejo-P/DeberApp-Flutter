@@ -1,4 +1,4 @@
-const List<Map<String, String>> Contacts = [
+List<Map<String, String>> Contacts = [
   {
     "name": "John Doe",
     "description": "John Doe is a web developer and designer",
