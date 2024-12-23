@@ -13,10 +13,13 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListCards(),
       backgroundColor: Colors.grey[300],
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.red[300],
-        child: const Icon(Icons.add),
+      floatingActionButton: Tooltip(
+        message: 'Agregar contacto',
+        child: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.red[300],
+          child: const Icon(Icons.add),
+        ),
       ),
     );
   }

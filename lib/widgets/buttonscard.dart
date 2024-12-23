@@ -13,10 +13,22 @@ class ButtonsCard extends StatelessWidget {
       // Alineacion de los botones
       mainAxisAlignment: MainAxisAlignment.spaceAround, // Espacio entre los botones
       children: [
-        CallButton(),
-        MessageButton(),
-        EmailButton(),
-        DeleteButton(),
+        Tooltip(
+          message: 'Llamar a esta persona',
+          child: CallButton()
+        ),
+        Tooltip(
+          message: 'Enviar mensaje de texto',
+          child: MessageButton()
+        ),
+        Tooltip(
+          message: 'Enviar correo electronico',
+          child: EmailButton()
+        ),
+        Tooltip(
+          message: 'Eliminar contacto',
+          child: DeleteButton()
+        ),
       ],
     );
   }
