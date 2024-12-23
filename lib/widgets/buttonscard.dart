@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:list_cards/widgets/callbutton.dart';
+import 'package:list_cards/widgets/emailbutton.dart';
+import 'package:list_cards/widgets/messagebutton.dart';
 
 class ButtonsCard extends StatelessWidget {
   const ButtonsCard({super.key,});
@@ -13,29 +16,9 @@ class ButtonsCard extends StatelessWidget {
       // Alineacion de los botones
       mainAxisAlignment: MainAxisAlignment.spaceAround, // Espacio entre los botones
       children: [
-        TextButton(
-          onPressed: () {},
-          child: const Text(
-            'Llamar',
-            style: textStyle,
-          ),
-        ),
-        TextButton(
-          onPressed: () {
-            print('Mensaje');
-          },
-          child: const Text(
-            'Mensaje',
-            style: textStyle,
-          ),
-        ),
-        TextButton(
-          onPressed: () {},
-          child: const Text(
-            'Correo',
-            style: textStyle,
-          )
-        ),
+        CallButton(textStyle: textStyle),
+        MessageButton(textStyle: textStyle),
+        EmailButton(textStyle: textStyle),
       ],
     );
   }
