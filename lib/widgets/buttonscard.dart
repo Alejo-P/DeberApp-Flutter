@@ -27,7 +27,7 @@ class ButtonsCard extends StatelessWidget {
           child: MessageButton()
         ),
         Tooltip(
-          message: 'Enviar correo electronico',
+          message: 'Información de contacto',
           child: InfoButton(
             contact: contact
           )
