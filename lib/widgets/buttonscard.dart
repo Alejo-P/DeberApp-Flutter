@@ -7,10 +7,12 @@ import 'package:list_cards/widgets/messagebutton.dart';
 class ButtonsCard extends StatelessWidget {
   const ButtonsCard({
     super.key,
-    required this.contact
+    required this.contact,
+    required this.index,
   });
 
   final Map<String, String> contact;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,9 @@ class ButtonsCard extends StatelessWidget {
         ),
         Tooltip(
           message: 'Eliminar contacto',
-          child: DeleteButton()
+          child: DeleteButton(
+            index: index
+          )
         ),
       ],
     );

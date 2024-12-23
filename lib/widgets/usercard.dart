@@ -7,10 +7,12 @@ class UserCard extends StatelessWidget {
   const UserCard({
     super.key,
     required this.contact,
+    required this.index,
   });
 
   // Informacion del contacto
   final Map<String, String> contact;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +55,7 @@ class UserCard extends StatelessWidget {
             Container(
               child: ButtonsCard(
                 contact: contact,
+                index: index,
               ),
             )
           ],

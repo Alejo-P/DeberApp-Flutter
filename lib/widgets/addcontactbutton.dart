@@ -15,7 +15,7 @@ class AddContactButton extends StatelessWidget {
   }
 
   void _showAddContactDialog(BuildContext context) {
-    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+    final GlobalKey<FormState> formKey = GlobalKey<FormState>();
     String? name;
     String? phone;
     String? email;
@@ -27,7 +27,7 @@ class AddContactButton extends StatelessWidget {
           title: const Text('Agregar contacto'),
           content: SingleChildScrollView(
             child: Form(
-              key: _formKey,
+              key: formKey,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -74,8 +74,8 @@ class AddContactButton extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  _formKey.currentState!.save();
+                if (formKey.currentState!.validate()) {
+                  formKey.currentState!.save();
                   Contacts.add({
                     'name': name!,
                     'phone': phone!,
