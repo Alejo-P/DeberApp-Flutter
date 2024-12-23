@@ -13,6 +13,8 @@ class AddContactButton extends StatelessWidget {
     String? name;
     String? phone;
     String? email;
+    String? description;
+
     return FloatingActionButton(
       onPressed: () => {
         showDialog(
@@ -58,6 +60,16 @@ class AddContactButton extends StatelessWidget {
                         },
                         onSaved: (value) => email = value,
                       ),
+                      TextFormField(
+                        decoration: const InputDecoration(labelText: 'Descripción'),
+                        onSaved: (value) => description = value,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Por favor, ingresa una descripción.';
+                          }
+                          return null;
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -71,6 +83,7 @@ class AddContactButton extends StatelessWidget {
                         'name': name!,
                         'phone': phone!,
                         'email': email!,
+                        'description': description!,
                       });
                       Navigator.of(context).pop();
                     }
