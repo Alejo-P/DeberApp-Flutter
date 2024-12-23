@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:list_cards/widgets/addcontactbutton.dart';
 import 'package:list_cards/widgets/listcards.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,11 +16,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.grey[300],
       floatingActionButton: Tooltip(
         message: 'Agregar contacto',
-        child: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: Colors.red[300],
-          child: const Icon(Icons.add),
-        ),
+        child: AddContactButton(),
       ),
     );
   }
