@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:list_cards/widgets/callbutton.dart';
+import 'package:list_cards/widgets/deletebutton.dart';
 import 'package:list_cards/widgets/emailbutton.dart';
 import 'package:list_cards/widgets/messagebutton.dart';
 
@@ -16,9 +17,10 @@ class ButtonsCard extends StatelessWidget {
       // Alineacion de los botones
       mainAxisAlignment: MainAxisAlignment.spaceAround, // Espacio entre los botones
       children: [
-        CallButton(textStyle: textStyle),
-        MessageButton(textStyle: textStyle),
-        EmailButton(textStyle: textStyle),
+        CallButton(),
+        MessageButton(),
+        EmailButton(),
+        DeleteButton(),
       ],
     );
   }
