@@ -101,7 +101,17 @@ class InfoButton extends StatelessWidget {
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
-                      child: Text('Cerrar'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red[300],
+                        foregroundColor: Colors.white,
+                      ),
+                      child: Text(
+                        'Cerrar',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ],
                 ),
