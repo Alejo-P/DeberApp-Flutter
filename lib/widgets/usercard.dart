@@ -51,7 +51,9 @@ class UserCard extends StatelessWidget {
               ),
             ),
             Container(
-              child: ButtonsCard(),
+              child: ButtonsCard(
+                contact: contact,
+              ),
             )
           ],
         )

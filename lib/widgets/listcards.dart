@@ -14,7 +14,7 @@ class ListCards extends StatelessWidget {
           // Se envia el contacto al widget UserCard
           contact: Contacts[index],
         );
-      }
+      },
     );
   }
 }
