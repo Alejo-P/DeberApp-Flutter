@@ -9,10 +9,6 @@ class ButtonsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const textStyle = TextStyle(
-      color: Colors.blue,
-      fontSize: 18,
-    );
     return Row(
       // Alineacion de los botones
       mainAxisAlignment: MainAxisAlignment.spaceAround, // Espacio entre los botones
