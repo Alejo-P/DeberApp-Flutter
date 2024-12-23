@@ -17,7 +17,10 @@ class HeaderCard extends StatelessWidget {
       // Fila de widgets
       children: [
         CircleAvatar(
-          backgroundImage: NetworkImage(contactImage),
+          backgroundImage: NetworkImage(
+            contactImage,
+            scale: 0.5,
+          ),
           radius: 25,
         ),
         SizedBox(width: 10),
